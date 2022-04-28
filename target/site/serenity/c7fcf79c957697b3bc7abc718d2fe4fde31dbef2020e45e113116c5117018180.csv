@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Perform authentication on website","Login to the platform with valid data","SUCCESS","2022-04-28T17:22:32.2708599-05:00[America/Bogota]","0.0","14.38"
+"Perform authentication on website","Login to the platform with invalid data","SUCCESS","2022-04-28T17:22:47.6146919-05:00[America/Bogota]","0.0","8.58"
+"Create an account on the website","Successful registration on the website","SUCCESS","2022-04-28T17:26:23.4850301-05:00[America/Bogota]","0.0","15.95"
+"Create an account on the website","Registration to the platform with email already registered","SUCCESS","2022-04-28T17:26:40.4512721-05:00[America/Bogota]","0.0","18.04"

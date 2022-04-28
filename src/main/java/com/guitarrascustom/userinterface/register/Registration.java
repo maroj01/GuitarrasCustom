@@ -36,6 +36,6 @@ public class Registration extends PageObject {
 
     public static final Target TITLE_HOME= Target
             .the("Title")
-            .located(By.xpath("/html/body/div/div/div[2]/div[1]"));
+            .located(By.xpath("//div[@class='title']//h2"));
 
 }

@@ -8,5 +8,5 @@ public class Logout extends PageObject {
 
     public static final Target LOGOUT = Target
             .the("Logout")
-            .located(By.xpath("//button[contains(text(),'Cerrar Sesion')]"));
+            .located(By.xpath("//button[@class='btn btn-dark mr-2']"));
 }

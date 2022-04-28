@@ -26,7 +26,6 @@ public class ShoppingFileSupport implements Task {
                 WaitUntil.the(SEARCH_PRODUCTS, isVisible()).forNoMoreThan(TEN.getValue()).seconds(),
                 Click.on(SEARCH_PRODUCTS),
                 Scroll.to(BUY_PRODUCT),
-                Click.on(CHECK_LUTTIER),
                 Click.on(BUY_PRODUCT),
 
                 Scroll.to(FIND_SUPPORT),
