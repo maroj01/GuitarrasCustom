@@ -6,7 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
 
-import static com.guitarrascustom.question.login.ConfirmPurchaseQuestion.confirmPurchaseQuestion;
+import static com.guitarrascustom.question.shopping.ConfirmPurchaseQuestion.confirmPurchaseQuestion;
+import static com.guitarrascustom.question.shopping.FailedPurchaseQuestion.failedPurchaseQuestion;
 import static com.guitarrascustom.task.shopping.ShoppingFileSupport.shoppingFileSupport;
 import static com.guitarrascustom.task.shopping.ShoppingNumberSupport.shoppingNumberSupport;
 import static com.guitarrascustom.task.fill.FillLogIn.fillLogIn;
@@ -36,8 +37,8 @@ public class ShoppingStepDefinition extends SetUp {
         }
     }
 
-    @When("I make the purchase process with proof of payment")
-    public void buyWithProofPayment() {
+    @When("I make the purchase process without proof of payment")
+    public void iMakeThePurchaseProcessWithoutProofOfPayment() {
         try {
             theActorInTheSpotlight().attemptsTo(
                     shoppingFileSupport()
@@ -48,11 +49,11 @@ public class ShoppingStepDefinition extends SetUp {
         }
     }
 
-    @Then("a confirmation message will be displayed")
-    public void confirmationMessageDisplayed() {
+    @Then("an error message will be displayed")
+    public void anErrorMessageWillBeDisplayed() {
         theActorInTheSpotlight().should(
                 seeThat(
-                        confirmPurchaseQuestion().is(),
+                        failedPurchaseQuestion().is(),
                         equalTo(true)
                 )
         );
@@ -79,4 +80,8 @@ public class ShoppingStepDefinition extends SetUp {
                 )
         );
     }
+
+
+
+
 }

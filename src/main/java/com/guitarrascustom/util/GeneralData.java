@@ -12,10 +12,8 @@ public class GeneralData {
         throw new AssertionError("Instantiating utility class.");
     }
 
-    private static Faker faker;
-
     public static RegisterModel registerModel() {
-        faker = new Faker();
+        Faker faker = new Faker();
 
 
         RegisterModel registerModel = new RegisterModel();
@@ -23,6 +21,7 @@ public class GeneralData {
         registerModel.setEmail(faker.internet().emailAddress());
         registerModel.setPassword(faker.internet().password(EIGHT.getValue(), SIXTEEN.getValue(), true));
         registerModel.setUserName(faker.name().username());
+
 
         return registerModel;
 
