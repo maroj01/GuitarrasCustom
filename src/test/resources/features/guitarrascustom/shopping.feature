@@ -7,11 +7,11 @@ Feature: Buy products through the website
   Background:
     Given I am connected to the store's website
 
-  Scenario: Buy by attaching proof of payment
-    When I make the purchase process with proof of payment
-    Then a confirmation message will be displayed
+  Scenario: Purchase without attaching proof of payment
+    When I make the purchase process without proof of payment
+    Then an error message will be displayed
 
 
-  Scenario: Buy by entering the payment receipt number
+    Scenario: Buy by entering the payment receipt number
     When I make the purchase process with receipt number
     Then a message with order number will be displayed

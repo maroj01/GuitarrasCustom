@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.guitarrascustom.userinterface.shopping.Shopping.*;
-import static com.guitarrascustom.util.Dictionary.CHOOSE_FILE;
+
 import static com.guitarrascustom.util.EnumTimeOut.TEN;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
@@ -28,12 +28,9 @@ public class ShoppingFileSupport implements Task {
                 Scroll.to(BUY_PRODUCT),
                 Click.on(BUY_PRODUCT),
 
-                Scroll.to(FIND_SUPPORT),
+                Scroll.to(SEND_RECEIPT),
                 Click.on(CUSTOM_SWITCH),
-                Click.on(FIND_SUPPORT),
-                SendKeys.of(CHOOSE_FILE).into(CARGE_BUTTON)
-
-                //Enter.keyValues(CHOOSE_FILE).into(CARGE_BUTTON)
+                Click.on(SEND_RECEIPT)
 
 
         );

@@ -24,7 +24,7 @@ buildscript {
 }
 
 ext {
-    serenityVersion = '2.2.9'
+    serenityVersion = '2.2.12'
     serenityCucumberVersion = '2.2.6'
     jacksonVersion = '2.11.3'
     apachePoiVersion = '3.17'
@@ -33,17 +33,7 @@ ext {
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
-sonarqube {
-    properties {
-        property "sonar.projectKey", "reto2Orange"
-        property "sonar.projectName", "reto2Orange"
-        property "sonar.java.source", "src"
-        property "sonar.host.url", "http://18.204.4.74:9000"
-        property "sonar.login", "9f2cd2b6963c8bf5e3441321939edc647dd9409d"
-        property "sonar.sourceEncoding", "UTF-8"
-        property "sonar.coverage.exclusions", "**/*.java"
-    }
-}
+
 
 serenity {
     reports = ["single-page-html"]

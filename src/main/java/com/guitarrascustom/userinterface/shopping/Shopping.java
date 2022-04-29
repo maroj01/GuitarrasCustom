@@ -68,5 +68,9 @@ public class Shopping extends PageObject {
             .the("Voucher Ok")
             .located(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]"));
 
+    public static final Target ERROR_VOUCHER = Target
+            .the("Error Voucher")
+            .located(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div[2]/div[2]/div"));
+
 
 }
